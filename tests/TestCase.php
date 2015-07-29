@@ -68,14 +68,28 @@ class TestCase extends PHPUnit_Framework_TestCase
         $this->assertSmartObject($smartobject);
     }
     
-    public function testSetterTrait()
+    public function testSetterTraitOfObject(){}
+    public function testSetterTraitOfObjectWithGetterTrait(){}
+    public function testSetterTraitOfObjectWithSetterTrait(){}
+    public function testSetterTraitOfObjectWithGetterSetterTrait(){}
+    public function testSetterTraitOfObjectWithDynamicMethodTrait(){}
+    public function testSetterTraitOfObjectWithGetterDynamicMethodTrait(){}
+    public function testSetterTraitOfObjectWithSetterDynamicMethodTrait(){}
+    public function testSetterTraitOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->foo);
     }
-
-    public function testGetterTrait()
+    
+    public function testGetterTraitOfObject(){}
+    public function testGetterTraitOfObjectWithGetterTrait(){}
+    public function testGetterTraitOfObjectWithSetterTrait(){}
+    public function testGetterTraitOfObjectWithGetterSetterTrait(){}
+    public function testGetterTraitOfObjectWithDynamicMethodTrait(){}
+    public function testGetterTraitOfObjectWithGetterDynamicMethodTrait(){}
+    public function testGetterTraitOfObjectWithSetterDynamicMethodTrait(){}
+    public function testGetterTraitOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->foo = 'bar';
