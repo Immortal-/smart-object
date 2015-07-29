@@ -1,4 +1,4 @@
-![Borter - Smart Object](http://static-content.webman.io/github.com/borter/smart-object.png)
+[![Borter - Smart Object](http://static-content.webman.io/github.com/borter/smart-object.png)](https://www.webman.io/borter/smart-object)
 
 A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. -->
 
