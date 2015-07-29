@@ -197,7 +197,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     public function testGetterTraitNullOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
-        $smartobject = new ObjectWithSetterTrait();
+        $smartobject = new TestObjectWithSetterTrait();
         $smartobject->getFoo();
     }
     
