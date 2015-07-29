@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/TestObject.php';
+require __DIR__ . '/Objects/TestObject.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
@@ -16,20 +16,20 @@ class TestCase extends PHPUnit_Framework_TestCase
 
     public function testConstruct()
     {
-        $smartobject = new TestObject();
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $this->assertSmartObject($smartobject);
     }
 
     public function testSetterTrait()
     {
-        $smartobject = new TestObject();
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->foo);
     }
 
     public function testGetterTrait()
     {
-        $smartobject = new TestObject();
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', $smartobject->getFoo());
     }
