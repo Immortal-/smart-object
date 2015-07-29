@@ -16,7 +16,7 @@
   },
   "autoload-dev": {
     "classmap": [
-      "tests/"
+      "tests/SmartObjectTest.php"
     ]
   }
 }
