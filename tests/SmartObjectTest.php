@@ -24,7 +24,7 @@ class SmartObjectTestCase extends PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf('Borter\SmartObject\Obj', $actual);
     }
-    
+
     public function testConstruct()
     {
         $smartobject = new TestObject();
