@@ -3,6 +3,7 @@
 namespace Borter\SmartObject;
 
 use Closure;
+use InvalidArgumentException;
 
 Trait DynamicMethodTrait {
         protected $methods = array();
