@@ -7,7 +7,7 @@ use Borter\SmartObject\GetterTrait;
 use Borter\SmartObject\SetterTrait;
 use Borter\SmartObject\DynamicMethodTrait;
 
-class Object extends Obj {
+class TestObject extends Obj {
   use GetterTrait;
   use SetterTrait;
   use DynamicMethodTrait;
