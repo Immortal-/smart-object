@@ -2,6 +2,8 @@
 
 namespace Borter\SmartObject;
 
+use Closure;
+
 Trait DynamicMethodTrait {
         protected $methods = array();
 
