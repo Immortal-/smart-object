@@ -46,7 +46,7 @@ class TestCase extends PHPUnit_Framework_TestCase
 
     public function testConstructObjectWithGetterSetterTrait()
     {
-        $smartobject = new TestWithGetterSetterTrait();
+        $smartobject = new TestObjectWithGetterSetterTrait();
         $this->assertSmartObject($smartobject);
     }
 
