@@ -18,5 +18,5 @@
     "classmap": [
       "tests/TestCase.php"
     ]
-  },
+  }
 }
