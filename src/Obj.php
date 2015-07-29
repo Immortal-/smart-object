@@ -3,6 +3,7 @@
 namespace Borter\SmartObject;
 
 use Stringy;
+use BadMethodCallException;
 
 class Obj {
         function __call($methodName, array $parameters) {
