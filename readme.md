@@ -17,6 +17,8 @@ A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. 
 * [Tests](#tests)
 * [License](#license)
 
+## Info
+
 Version: 0.1    
 Author: Mark Topper [[Facebook](https://facebook.com/marktopper)] [[Github](https://github.com/marktopper)] [[Twitter](https://twitter.com/webman.io)]    
 Website: [www.webman.io](https://www.webman.io)    
