@@ -1,6 +1,6 @@
 [![Borter - Smart Object](http://static-content.webman.io/github.com/borter/smart-object.png)](https://www.webman.io/borter/smart-object)
 
-A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. -->
+A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
 
 [![Build Status](https://travis-ci.org/borter/smart-object.svg)](https://travis-ci.org/borter/smart-object)
 [![Total Downloads](https://poser.pugx.org/borter/smart-object/d/total.svg)](https://packagist.org/packages/borter/smart-object)
