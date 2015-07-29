@@ -4,7 +4,7 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Stringy">
+        <testsuite name="SmartObject">
             <file>tests/CommonTest.php</file>
             <file>tests/SmartObjectTest.php</file>
         </testsuite>
