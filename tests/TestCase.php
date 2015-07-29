@@ -32,6 +32,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     }
 */
 
+/*
     public function testGetterTrait()
     {
         $smartobject = new TestObject();
@@ -39,4 +40,5 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', (string) $smartobject->getFoo());
     }
+*/
 }
