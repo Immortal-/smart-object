@@ -260,7 +260,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $smartobject = new TestObjectWithGetterSetterTrait();
         $smartobject->setFoo('bar');
-        $this->assertEquels('bar', $smartobjecy->getFoo());
+        $this->assertEquals('bar', $smartobjecy->getFoo());
     }
     
     public function testSetterGetterTraitOfObjectWithDynamicMethodTrait()
