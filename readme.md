@@ -9,7 +9,7 @@ A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. 
 * [Info](#info)
 * [Requiring/Loading](#requiringloading)
 * [Methods](#methods)
-    * [dynamicSetter](#dynamicSetter)
+    * [dynamicSetter](#dynamicSetter)r
     * [dynamicGetter](#dynamicGetter)
     * [addMethod](#addMethod)
     * [setMethod](#collapsewhitespace)
@@ -85,7 +85,7 @@ $object-setAttribute("Value");
 $object->attribute; // returns "Value"
 ```
 
-*Requires use of [SetterTrait](https://github.com/borter/smart-object/blob/master/src/SetterTrait.php).*
+__*Requires use of [SetterTrait](https://github.com/borter/smart-object/blob/master/src/SetterTrait.php).*__
 
 *Note: Method called will underscore the methodName, remove the leading `set_` and use that as the attribute name.*
 *Meaning that `$this->setSomeLongerAttributeName("Value")` will set `$this->some_longer_attribute_name` to be `Value`.*
