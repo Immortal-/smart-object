@@ -9,10 +9,10 @@ A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. 
 * [Info](#info)
 * [Requiring/Loading](#requiringloading)
 * [Methods](#methods)
-    * [dynamicSetter](#dynamicSetter)r
-    * [dynamicGetter](#dynamicGetter)
-    * [addMethod](#addMethod)
-    * [setMethod](#collapsewhitespace)
+    * [dynamicSetter](#dynamicsetter)
+    * [dynamicGetter](#dynamicgetter)
+    * [addMethod](#addmethod)
+    * [setMethod](#setmethod)
 * [Links](#links)
 * [Tests](#tests)
 * [License](#license)
@@ -140,7 +140,7 @@ $object->hello("Mark"); // throws a Fatal Error
 
 __*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*__
 
-*Note: This can __only__ remove a method added using the [`addMethod`](#addMethod)-method.*
+*Note: This can __only__ remove a method added using the [`addMethod`](#addmethod)-method.*
 
 ## Links
 
