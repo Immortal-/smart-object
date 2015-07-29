@@ -1,0 +1,12 @@
+{
+  "name": "borter\smart-object",
+  "version": "0.1",
+  "require": {
+    "danielstjules/stringy": "~1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
+}
