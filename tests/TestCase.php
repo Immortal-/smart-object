@@ -169,7 +169,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     public function testGetterTraitOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
-        $smartobject = new ObjectWithSetterDynamicMethodTrait();
+        $smartobject = new TestObjectWithSetterDynamicMethodTrait();
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
     }
@@ -184,7 +184,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     public function testGetterTraitNullOfObject()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
-        $smartobject = new ObjectWithSetterDynamicMethodTrait();
+        $smartobject = new TestObjectWithSetterDynamicMethodTrait();
         $smartobject->getFoo();
     }
     
