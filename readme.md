@@ -101,7 +101,7 @@ $object = new YourClass;
 $object-getAttribute(); // returns $this->attribute
 ```
 
-*Requires use of [GetterTrait](https://github.com/borter/smart-object/blob/master/src/GetterTrait.php).*
+__*Requires use of [GetterTrait](https://github.com/borter/smart-object/blob/master/src/GetterTrait.php).*__
 
 *Note: Method called will underscore the methodName, remove the leading `get_` and use that as the attribute name.*
 *Meaning that `$this->getSomeLongerAttributeName()` will return `$this->some_longer_attribute_name`.*
@@ -120,7 +120,7 @@ $object->addClass("hello", function($name){
 $object->hello("Mark"); // returns "Hello Mark!";
 ```
 
-*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*
+__*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*__
 
 #### removeMethod
 
@@ -138,7 +138,7 @@ $object->removeClass("hello");
 $object->hello("Mark"); // throws a Fatal Error
 ```
 
-*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*
+__*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*__
 
 *Note: This can **only** remove a method added using the [`addMethod`](#addMethod)-method.*
 
