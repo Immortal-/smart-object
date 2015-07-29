@@ -24,7 +24,7 @@ A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. 
 Version: 0.1    
 Author: Mark Topper [[Facebook](https://facebook.com/marktopper)] [[Github](https://github.com/marktopper)] [[Twitter](https://twitter.com/webman.io)]    
 Website: [www.webman.io](https://www.webman.io)    
-Email: [mark[at]webman.io](mailto:mark@webman.io)
+Email: [mark@webman.io](mailto:mark@webman.io)
 
 ## Requiring/Loading
 
@@ -150,7 +150,7 @@ The following is a list of libraries that extend SmartObject:
 
  * None yet
 
-*Contact me at [mark[at]webman.io](mailto:mark@webman.io) to get yours added.*
+*Contact me at [mar@webman.io](mailto:mark@webman.io) to get yours added.*
 
 The following is a list of libraries that requires by SmartObject:
 
@@ -161,6 +161,18 @@ A PHP string manipulation library with multibyte support
 
 From the project directory, tests can be ran using `phpunit`
 
+## Official Documentation
+
+Documentation for this library can be found on the [website](https://www.webman.io/borter/smart-object).
+
+## Contributing
+
+Thank you for considering contributing! The contribution guide can be found in the [contributions.md](https://github.com/borter/smart-object/blob/master/contributions.md).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within SmartObject, please send an e-mail to Mark Topper at [mark@webman.io](mailto:mark@webman.io). All security vulnerabilities will be promptly addressed.
+
 ## License
 
-Released under the MIT License - see [`LICENSE.txt`](https://github.com/borter/smart-object/blob/master/LICENSE) for details.
+Released under the MIT License - see [`LICENSE.txt`](https://github.com/borter/smart-object/blob/master/license) for details.
