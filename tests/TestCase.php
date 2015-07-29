@@ -36,7 +36,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $smartobject = new TestObject();
         $this->assertSmartObject($smartobject);
-        $smartobject->setFoo('bar');
+        var_dump($smartobject->setFoo('bar'), $smartobject->foo);
         $this->assertEquals('bar', (string) $smartobject->foo);
     }
 
