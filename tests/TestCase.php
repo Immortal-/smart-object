@@ -2,7 +2,7 @@
 
 require __DIR__ . '/TestObject.php';
 
-class SmartObjectTestCase extends PHPUnit_Framework_TestCase
+class TestCase extends PHPUnit_Framework_TestCase
 {
     /**
      * Asserts that a variable is of a Borter\SmartObject\Obj instance.
