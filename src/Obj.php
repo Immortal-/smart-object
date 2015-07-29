@@ -11,11 +11,11 @@ class Obj {
                 $underscored = Stringy\StaticStringy::underscored($methodName);
                 if (method_exists($this, $methodName)) {
                         return call_user_func_array(array($this, $methodName), $parameters);
-                } elseif (substr($underscored, 0, 4) == 'set_' && isset($traits['SetterTrait'])) {
+                } elseif (isset($traits['Borter\SmartObject\SetterTrait']) && substr($underscored, 0, 4) == 'set_') {
                         return $this->__set(substr($underscored, 4), $parameters[0]);
-                } elseif (substr($underscored, 0, 4) == 'get_' && isset($traits['GetterTrait'])) {
+                } elseif (isset($traits['Borter\SmartObject\GetterTrait']) && substr($underscored, 0, 4) == 'get_') {
                         return $this->__get(substr($underscored, 4));
-                } elseif (isset($traits['DynamicMethodTrait']) && isset($this->methods) && isset($this->methods[$methodName])) {
+                } elseif (isset($traits['Borter\SmartObject\DynamicMethodTrait']) && isset($this->methods) && isset($this->methods[$methodName])) {
                         return call_user_func_array($this->methods[$methodName], $parameters);
                 }
                 throw new BadMethodCallException("Method [{$methodName}] does not exists.");
