@@ -28,7 +28,7 @@ class SmartObjectTestCase extends PHPUnit_Framework_TestCase
     public function testConstruct()
     {
         $smartobject = new TestObject();
-        $this->assertStringy($stringy);
+        $this->assertSmartObject($smartobject);
     }
 
     /**
