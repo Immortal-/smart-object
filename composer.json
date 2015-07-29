@@ -1,5 +1,5 @@
 {
-  "name": "borter\smart-object",
+  "name": "borter/smart-object",
   "version": "0.1",
   "require": {
     "danielstjules/stringy": "~1.0"
