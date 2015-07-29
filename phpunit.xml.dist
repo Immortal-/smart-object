@@ -5,7 +5,6 @@
          syntaxCheck="false">
     <testsuites>
         <testsuite name="SmartObject">
-            <file>tests/CommonTest.php</file>
             <file>tests/SmartObjectTest.php</file>
         </testsuite>
     </testsuites>
