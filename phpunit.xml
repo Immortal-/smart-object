@@ -4,9 +4,8 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Stringy">
-            <file>tests/CommonTest.php</file>
-            <file>tests/SmartObjectTest.php</file>
+        <testsuite name="SmartObject">
+            <file>tests/TestCase.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

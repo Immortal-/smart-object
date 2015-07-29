@@ -1,6 +1,6 @@
 [![Borter - Smart Object](http://static-content.webman.io/github.com/borter/smart-object.png)](https://www.webman.io/borter/smart-object)
 
-A PHP object helper library. <!-- Tested and compatible with PHP 5.3+ and HHVM. -->
+A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
 
 [![Build Status](https://travis-ci.org/borter/smart-object.svg)](https://travis-ci.org/borter/smart-object)
 [![Total Downloads](https://poser.pugx.org/borter/smart-object/d/total.svg)](https://packagist.org/packages/borter/smart-object)
@@ -107,6 +107,8 @@ __*Requires use of [GetterTrait](https://github.com/borter/smart-object/blob/mas
 
 *Note: Method called will underscore the methodName, remove the leading `get_` and use that as the attribute name.*
 *Meaning that `$this->getSomeLongerAttributeName()` will return `$this->some_longer_attribute_name`.*
+
+*Note: If an attribute does not exists it will return `null`.*
 
 #### addMethod
 
