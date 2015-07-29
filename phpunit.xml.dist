@@ -7,7 +7,6 @@
         <testsuite name="Stringy">
             <file>tests/CommonTest.php</file>
             <file>tests/SmartObjectTest.php</file>
-            <file phpVersion="5.6.0">tests/CreateTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
