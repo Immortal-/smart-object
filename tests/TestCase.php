@@ -70,14 +70,14 @@ class TestCase extends PHPUnit_Framework_TestCase
     
     public function testSetterTraitOfObject()
     {
-        $this->setExpectedException('InvalidArgumentException', 'Right Message');
-        $smartobject = new TestObjectWithSetterTrait();
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
+        $smartobject = new TestObject();
         $smartobject->setFoo('bar');
     }
     
     public function testSetterTraitOfObjectWithGetterTrait()
     {
-        $this->setExpectedException('InvalidArgumentException', 'Right Message');
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->setFoo('bar');
     }
@@ -97,14 +97,14 @@ class TestCase extends PHPUnit_Framework_TestCase
     }
     public function testSetterTraitOfObjectWithDynamicMethodTrait()
     {
-        $this->setExpectedException('InvalidArgumentException', 'Right Message');
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->setFoo('bar');
     }
     
     public function testSetterTraitOfObjectWithGetterDynamicMethodTrait()
     {
-        $this->setExpectedException('InvalidArgumentException', 'Right Message');
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
         $smartobject->setFoo('bar');
     }
@@ -123,7 +123,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     
     public function testGetterTraitOfObject()
     {
-        $this->setExpectedException('InvalidArgumentException', 'Right Message');
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObject();
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
