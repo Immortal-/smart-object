@@ -20,8 +20,17 @@ class TestCase extends PHPUnit_Framework_TestCase
         $this->assertSmartObject($smartobject);
     }
 
+    public function testSetterTrait()
+    {
+        $smartobject = new TestObject();
+        $smartobject->setFoo('bar');
+        $this->assertEquals('bar', $smartobject->foo);
+    }
+
     public function testGetterTrait()
     {
-        $this->assertTrue(TRUE);
+        $smartobject = new TestObject();
+        $smartobject->foo = 'bar';
+        $this->assertEquals('bar', $smartobject->getFoo());
     }
 }
