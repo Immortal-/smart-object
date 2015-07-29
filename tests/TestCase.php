@@ -1,6 +1,13 @@
 <?php
 
 require __DIR__ . '/Objects/TestObject.php';
+require __DIR__ . '/Objects/TestObjectWithGetterTrait.php';
+require __DIR__ . '/Objects/TestObjectWithSetterTrait.php';
+require __DIR__ . '/Objects/TestObjectWithGetterSetterTrait.php';
+require __DIR__ . '/Objects/TestObjectWithDynamicMethodTrait.php';
+require __DIR__ . '/Objects/TestObjectWithGetterDynamicMethodTrait.php';
+require __DIR__ . '/Objects/TestObjectWithSetterDynamicMethodTrait.php';
+require __DIR__ . '/Objects/TestObjectWithGetterSetterDynamicMethodTrait.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
