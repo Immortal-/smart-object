@@ -33,12 +33,6 @@ class TestCase extends PHPUnit_Framework_TestCase
         $this->assertSmartObject($smartobject);
     }
 
-    public function testConstructObjectWithSetterDynamicMethodTrait()
-    {
-        $smartobject = new TestObjectWithSetterDynamicMethodTrait();
-        $this->assertSmartObject($smartobject);
-    }
-
     public function testConstructObjectWithGetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
