@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/TestObject.php';
+require __DIR__ . '/Object.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
