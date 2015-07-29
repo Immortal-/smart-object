@@ -2,6 +2,8 @@
 
 namespace Borter\SmartObject;
 
+use Stringy;
+
 class Obj {
         function __call($methodName, array $parameters) {
                 $traits = class_uses(get_called_class());
