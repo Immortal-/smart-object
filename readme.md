@@ -108,6 +108,8 @@ __*Requires use of [GetterTrait](https://github.com/borter/smart-object/blob/mas
 *Note: Method called will underscore the methodName, remove the leading `get_` and use that as the attribute name.*
 *Meaning that `$this->getSomeLongerAttributeName()` will return `$this->some_longer_attribute_name`.*
 
+*Note: If an attribute does not exists it will return `null`.*
+
 #### addMethod
 
 Dynamicly adds a method to your object.
