@@ -1,12 +1,22 @@
 {
   "name": "borter/smart-object",
   "version": "0.1",
+  "description": "SmartObject can give your object some smart methods quite easy.",
+  "keywords": ["class", "object", "getter", "setter", "dynamic", "methods", "add method", "remove method"],
+  "license": "MIT",
+  "type": "package",
   "require": {
+    "php": ">=5.3",
     "danielstjules/stringy": "~1.0"
   },
   "autoload": {
     "classmap": [
       "src/"
     ]
-  }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
 }
