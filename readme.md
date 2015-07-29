@@ -140,7 +140,7 @@ $object->hello("Mark"); // throws a Fatal Error
 
 __*Requires use of [DynaicMethodTrait](https://github.com/borter/smart-object/blob/master/src/DynaicMethodTrait.php).*__
 
-*Note: This can **only** remove a method added using the [`addMethod`](#addMethod)-method.*
+*Note: This can __only__ remove a method added using the [`addMethod`](#addMethod)-method.*
 
 ## Links
 
