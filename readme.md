@@ -177,4 +177,4 @@ If you discover a security vulnerability within SmartObject, please send an e-ma
 
 ## License
 
-Released under the MIT License - see [`LICENSE.txt`](https://github.com/borter/smart-object/blob/master/license) for details.
+Released under the MIT License - see [`license.txt`](https://github.com/borter/smart-object/blob/master/license) for details.
