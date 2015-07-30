@@ -20,8 +20,8 @@
     "phpunit/phpunit": "~4.0"
   },
   "support": {
-    "issues": "https://github.com/danielstjules/Stringy/issues",
-    "source": "https://github.com/danielstjules/Stringy"
+    "issues": "https://github.com/borter/smart-object/issues",
+    "source": "https://github.com/borter/smart-object"
   },
   "autoload": {
     "psr-4": { "Borter\\SmartObject\\": "src/" }
