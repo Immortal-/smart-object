@@ -505,12 +505,29 @@ class TestCase extends PHPUnit_Framework_TestCase
     
     public function testRemoveUnavailableMethodOfObjectWithDynamicMethodTrait()
     {
-    //    $this->setExpectedException('BadMethodCallException', 'Method [removeMethod] does not exists.');
+        $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
     
-    public function testRemoveUnavailableMethodOfObjectWithGetterDynamicMethodTrait(){}
-    public function testRemoveUnavailableMethodOfObjectWithSetterDynamicMethodTrait(){}
-    public function testRemoveUnavailableMethodOfObjectWithGetterSetterDynamicMethodTrait(){}
+    public function testRemoveUnavailableMethodOfObjectWithGetterDynamicMethodTrait()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
+        $smartobject = new TestObjectWithGetterDynamicMethodTrait();
+        $smartobject->removeMethod('foo');
+    }
+    
+    public function testRemoveUnavailableMethodOfObjectWithSetterDynamicMethodTrait()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
+        $smartobject = new TestObjectWithSetterDynamicMethodTrait();
+        $smartobject->removeMethod('foo');
+    }
+    
+    public function testRemoveUnavailableMethodOfObjectWithGetterSetterDynamicMethodTrait()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
+        $smartobject->removeMethod('foo');
+    }
 }
