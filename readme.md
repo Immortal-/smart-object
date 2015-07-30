@@ -152,7 +152,7 @@ The following is a list of libraries that extend SmartObject:
 
  * None yet
 
-*Contact me at [mar@webman.io](mailto:mark@webman.io) to get yours added.*
+*Contact me at [mark@webman.io](mailto:mark@webman.io) to get yours added.*
 
 The following is a list of libraries that requires by SmartObject:
 
