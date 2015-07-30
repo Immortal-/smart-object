@@ -17,6 +17,9 @@ A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
     * [setMethod](#setmethod)
 * [Links](#links)
 * [Tests](#tests)
+* [Official Documentation](#officialdocumentation)
+* [Contributing](#contributing)
+* [Security Vulnerabilities](#securityvulnerabilities)
 * [License](#license)
 
 ## Info
