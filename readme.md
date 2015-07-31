@@ -95,7 +95,7 @@ $object->set____(string $value)
 
 ```php
 $object = new YourClass;
-$object-setAttribute("Value");
+$object->setAttribute("Value");
 $object->attribute; // returns "Value"
 ```
 
