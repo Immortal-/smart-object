@@ -33,7 +33,7 @@ A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
 
 ## Info
 
-Version: 1.0    
+Version: 1.1    
 Author: Mark Topper [[Facebook](https://facebook.com/marktopper)] [[Github](https://github.com/marktopper)] [[Twitter](https://twitter.com/webman.io)]    
 Website: [www.webman.io](https://www.webman.io)    
 Email: [mark@webman.io](mailto:mark@webman.io)
@@ -100,6 +100,8 @@ $object->attribute; // returns "Value"
 ```
 
 __*Requires use of [SetterTrait](https://github.com/borter/smart-object/blob/master/src/SetterTrait.php).*__
+
+*Note: Since `v1.1` the setter are now chainable. Example `$object->setFoo('foo')->setBar('bar');`.* 
 
 *Note: Method called will underscore the methodName, remove the leading `set_` and use that as the attribute name.*
 *Meaning that `$this->setSomeLongerAttributeName("Value")` will set `$this->some_longer_attribute_name` to be `Value`.*
