@@ -121,7 +121,7 @@ $object->addMethod(string $methodName, Closure $function)
 
 ```php
 $object = YourClass;
-$object->addClass("hello", function($name){
+$object->addMethod("hello", function($name){
   return "Hello {$name}!";
 });
 $object->hello("Mark"); // returns "Hello Mark!";
@@ -137,11 +137,11 @@ $object->removeMethod(string $methodName)
 
 ```php
 $object = YourClass;
-$object->addClass("hello", function($name){
+$object->addMethod("hello", function($name){
   return "Hello {$name}!";
 });
 $object->hello("Mark"); // returns "Hello Mark!";
-$object->removeClass("hello");
+$object->removeMethod("hello");
 $object->hello("Mark"); // throws a Fatal Error
 ```
 
