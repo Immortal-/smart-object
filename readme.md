@@ -10,7 +10,7 @@ A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
 [![Issues](https://img.shields.io/github/issues/borter/smart-object.svg)](https://github.com/borter/smart-object/issues)
 [![Forks](https://img.shields.io/github/forks/borter/smart-object.svg)](https://github.com/borter/smart-object/network)
 [![GitHub stars](https://img.shields.io/github/stars/borter/smart-object.svg)](https://github.com/borter/smart-function/stargazers)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/borter/smart-object.svg?style=social?style=flat)](https://twitter.com/intent/tweet?text=Check%20out%this%20awesome%20PHP%20package!%20Make%20objects%20smatter%20with%20dynamic%20methods%2C%20getters%20and%20setters.%20%23php%20%23webdev%20https%3A%2F%2Fgithub.com%2Fborter%2Fsmart-object)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/borter/smart-object.svg?style=social?style=flat)](https://twitter.com/intent/tweet?text=Check+out+this+awesome+PHP+package!+Make+objects+smatter+with+dynamic+methods%2C+getters+and+setters.+%23php+%23webdev+https%3A%2F%2Fgithub.com%2Fborter%2Fsmart-object)
 [![Gratipay donate button](https://img.shields.io/gratipay/marktopper.svg)](https://www.gratipay.com/marktopper/ "Donate weekly to this project using Gratipay")
 [![Flattr donate button](https://img.shields.io/badge/flattr-donate-yellow.svg)](http://flattr.com/profile/marktopper "Donate monthly to this project using Flattr")
 [![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LGMRSYNWLWBAU "Donate once-off to this project using Paypal")
