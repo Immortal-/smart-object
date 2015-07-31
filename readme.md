@@ -101,6 +101,8 @@ $object->attribute; // returns "Value"
 
 __*Requires use of [SetterTrait](https://github.com/borter/smart-object/blob/master/src/SetterTrait.php).*__
 
+*Note: Since `v1.1` the setter are now chainable. Example `$object->setFoo('foo')->setBar('bar');`.* 
+
 *Note: Method called will underscore the methodName, remove the leading `set_` and use that as the attribute name.*
 *Meaning that `$this->setSomeLongerAttributeName("Value")` will set `$this->some_longer_attribute_name` to be `Value`.*
 
