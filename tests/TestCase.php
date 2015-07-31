@@ -530,4 +530,64 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
+    
+    /*
+     * test ChainableSetters
+     */
+    public function testChainableSettersOfObject()
+    {
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
+        $smartobject = new TestObject();
+        $smartobject->setFoo('bar')->setBar('foo');
+    }
+    
+    public function testChainableSettersOfObjectWithGetterTrait()
+    {
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
+        $smartobject = new TestObjectWithGetterTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+    }
+    
+    public function testChainableSettersOfObjectWithSetterTrait()
+    {
+        $smartobject = new TestObjectWithSetterTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+        $this->assertEquals('bar', $smartobject->foo);
+        $this->assertEquals('foo', $smartobject->bar);
+    }
+    
+    public function testChainableSettersOfObjectWithGetterSetterTrait()
+    {
+        $smartobject = new TestObjectWithGetterSetterTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+        $this->assertEquals('bar', $smartobject->foo);
+        $this->assertEquals('foo', $smartobject->bar);
+    }
+    public function testChainableSettersOfObjectWithDynamicMethodTrait()
+    {
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
+        $smartobject = new TestObjectWithDynamicMethodTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+    }
+    
+    public function testChainableSettersOfObjectWithGetterDynamicMethodTrait()
+    {
+        $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
+        $smartobject = new TestObjectWithGetterDynamicMethodTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+    }
+    public function testChainableSettersOfObjectWithSetterDynamicMethodTrait()
+    {
+        $smartobject = new TestObjectWithSetterDynamicMethodTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+        $this->assertEquals('bar', $smartobject->foo);
+        $this->assertEquals('foo', $smartobject->bar);
+    }
+    public function testChainableSettersOfObjectWithGetterSetterDynamicMethodTrait()
+    {
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
+        $smartobject->setFoo('bar')->setBar('foo');
+        $this->assertEquals('bar', $smartobject->foo);
+        $this->assertEquals('foo', $smartobject->bar);
+    }
 }
