@@ -1,13 +1,13 @@
 <?php
 
-require __DIR__ . '/Objects/TestObject.php';
-require __DIR__ . '/Objects/TestObjectWithGetterTrait.php';
-require __DIR__ . '/Objects/TestObjectWithSetterTrait.php';
-require __DIR__ . '/Objects/TestObjectWithGetterSetterTrait.php';
-require __DIR__ . '/Objects/TestObjectWithDynamicMethodTrait.php';
-require __DIR__ . '/Objects/TestObjectWithGetterDynamicMethodTrait.php';
-require __DIR__ . '/Objects/TestObjectWithSetterDynamicMethodTrait.php';
-require __DIR__ . '/Objects/TestObjectWithGetterSetterDynamicMethodTrait.php';
+require __DIR__.'/Objects/TestObject.php';
+require __DIR__.'/Objects/TestObjectWithGetterTrait.php';
+require __DIR__.'/Objects/TestObjectWithSetterTrait.php';
+require __DIR__.'/Objects/TestObjectWithGetterSetterTrait.php';
+require __DIR__.'/Objects/TestObjectWithDynamicMethodTrait.php';
+require __DIR__.'/Objects/TestObjectWithGetterDynamicMethodTrait.php';
+require __DIR__.'/Objects/TestObjectWithSetterDynamicMethodTrait.php';
+require __DIR__.'/Objects/TestObjectWithGetterSetterDynamicMethodTrait.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
@@ -20,7 +20,7 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf('Borter\SmartObject\Obj', $actual);
     }
-    
+
     /*
      * test construction
      */
@@ -70,7 +70,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $this->assertSmartObject($smartobject);
     }
-    
+
     /*
      * test setterTrait
      */
@@ -80,21 +80,21 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObject();
         $smartobject->setFoo('bar');
     }
-    
+
     public function testSetterTraitOfObjectWithGetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->setFoo('bar');
     }
-    
+
     public function testSetterTraitOfObjectWithSetterTrait()
     {
         $smartobject = new TestObjectWithSetterTrait();
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->foo);
     }
-    
+
     public function testSetterTraitOfObjectWithGetterSetterTrait()
     {
         $smartobject = new TestObjectWithGetterSetterTrait();
@@ -107,7 +107,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->setFoo('bar');
     }
-    
+
     public function testSetterTraitOfObjectWithGetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
@@ -126,7 +126,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->foo);
     }
-    
+
     /*
      * test getterTrait
      */
@@ -137,14 +137,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitOfObjectWithGetterTrait()
     {
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
@@ -152,14 +152,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitOfObjectWithGetterSetterTrait()
     {
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitOfObjectWithDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
@@ -167,14 +167,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitOfObjectWithGetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
@@ -182,14 +182,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->foo = 'bar';
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->foo = 'bar';
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     /*
      * test getterTrait of non existing attribute
      */
@@ -199,52 +199,52 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithSetterDynamicMethodTrait();
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitNullOfObjectWithGetterTrait()
     {
         $smartobject = new TestObjectWithGetterTrait();
         $this->assertEquals(null, $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitNullOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
         $smartobject = new TestObjectWithSetterTrait();
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitNullOfObjectWithGetterSetterTrait()
     {
         $smartobject = new TestObjectWithGetterSetterTrait();
         $this->assertEquals(null, $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitNullOfObjectWithDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitNullOfObjectWithGetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
         $this->assertEquals(null, $smartobject->getFoo());
     }
-    
+
     public function testGetterTraitNullOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
         $smartobject = new TestObjectWithSetterDynamicMethodTrait();
         $smartobject->getFoo();
     }
-    
+
     public function testGetterTraitNullOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $this->assertEquals(null, $smartobject->getFoo());
     }
-    
+
     /*
      * test setterTrait and getterTrait
      */
@@ -262,7 +262,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $smartobject->getFoo();
     }
-    
+
     public function testSetterGetterTraitOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
@@ -270,14 +270,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $smartobject->getFoo();
     }
-    
+
     public function testSetterGetterTraitOfObjectWithGetterSetterTrait()
     {
         $smartobject = new TestObjectWithGetterSetterTrait();
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     public function testSetterGetterTraitOfObjectWithDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
@@ -285,7 +285,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $smartobject->getFoo();
     }
-    
+
     public function testSetterGetterTraitOfObjectWithGetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
@@ -293,7 +293,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $smartobject->getFoo();
     }
-    
+
     public function testSetterGetterTraitOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [getFoo] does not exists.');
@@ -307,7 +307,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->getFoo());
     }
-    
+
     /*
      * test addMethod
      */
@@ -315,73 +315,73 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObject();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
     }
-    
+
     public function testAddMethodOfObjectWithGetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
     }
-    
+
     public function testAddMethodOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithSetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
     }
-    
+
     public function testAddMethodOfObjectWithGetterSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithGetterSetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
     }
-    
+
     public function testAddMethodOfObjectWithDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $this->assertEquals('foobar', $smartobject->foo());
     }
-    
+
     public function testAddMethodOfObjectWithGetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $this->assertEquals('foobar', $smartobject->foo());
     }
-    
+
     public function testAddMethodOfObjectWithSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithSetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $this->assertEquals('foobar', $smartobject->foo());
     }
     public function testAddMethodOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $this->assertEquals('foobar', $smartobject->foo());
     }
-    
+
     /*
      * test removeMethod
      */
@@ -389,52 +389,52 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObject();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithGetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithSetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithGetterSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [addMethod] does not exists.');
         $smartobject = new TestObjectWithGetterSetterTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
@@ -443,35 +443,35 @@ class TestCase extends PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('BadMethodCallException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithSetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     public function testRemoveMethodOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
-        $smartobject->addMethod('foo', function($string = 'bar'){
-            return 'foo' . $string;
+        $smartobject->addMethod('foo', function ($string = 'bar') {
+            return 'foo'.$string;
         });
         $smartobject->removeMethod('foo');
         $smartobject->foo();
     }
-    
+
     /*
      * test removeUnavailableMethod
      */
@@ -481,56 +481,56 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObject();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithGetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [removeMethod] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [removeMethod] does not exists.');
         $smartobject = new TestObjectWithSetterTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithGetterSetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [removeMethod] does not exists.');
         $smartobject = new TestObjectWithGetterSetterTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithDynamicMethodTrait()
     {
         $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithGetterDynamicMethodTrait()
     {
         $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithGetterDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithSetterDynamicMethodTrait()
     {
         $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithSetterDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     public function testRemoveUnavailableMethodOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $this->setExpectedException('InvalidArgumentException', 'Method [foo] does not exists.');
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->removeMethod('foo');
     }
-    
+
     /*
      * test ChainableSetters
      */
@@ -540,14 +540,14 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObject();
         $smartobject->setFoo('bar')->setBar('foo');
     }
-    
+
     public function testChainableSettersOfObjectWithGetterTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
         $smartobject = new TestObjectWithGetterTrait();
         $smartobject->setFoo('bar')->setBar('foo');
     }
-    
+
     public function testChainableSettersOfObjectWithSetterTrait()
     {
         $smartobject = new TestObjectWithSetterTrait();
@@ -555,7 +555,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $this->assertEquals('bar', $smartobject->foo);
         $this->assertEquals('foo', $smartobject->bar);
     }
-    
+
     public function testChainableSettersOfObjectWithGetterSetterTrait()
     {
         $smartobject = new TestObjectWithGetterSetterTrait();
@@ -569,7 +569,7 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithDynamicMethodTrait();
         $smartobject->setFoo('bar')->setBar('foo');
     }
-    
+
     public function testChainableSettersOfObjectWithGetterDynamicMethodTrait()
     {
         $this->setExpectedException('BadMethodCallException', 'Method [setFoo] does not exists.');
