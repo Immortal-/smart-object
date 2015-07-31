@@ -2,9 +2,12 @@
 
 namespace Borter\SmartObject;
 
-Trait SetterTrait {
-        public function __set($property, $value) {
-                $this->$property = $value;
-                return $this;
-        }
+trait SetterTrait
+{
+    public function __set($property, $value)
+    {
+        $this->$property = $value;
+
+        return $this;
+    }
 }

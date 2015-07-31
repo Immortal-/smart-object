@@ -1,7 +1,10 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
-use Borter\SmartObject\Obj;
+
+require_once __DIR__.'/../../vendor/autoload.php';
 use Borter\SmartObject\DynamicMethodTrait;
-class TestObjectWithDynamicMethodTrait extends Obj {
-  use DynamicMethodTrait;
+use Borter\SmartObject\Obj;
+
+class TestObjectWithDynamicMethodTrait extends Obj
+{
+    use DynamicMethodTrait;
 }
