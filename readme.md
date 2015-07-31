@@ -33,7 +33,7 @@ A PHP object helper library. Tested and compatible with PHP 5.4+ and HHVM.
 
 ## Info
 
-Version: 1.0    
+Version: 1.1    
 Author: Mark Topper [[Facebook](https://facebook.com/marktopper)] [[Github](https://github.com/marktopper)] [[Twitter](https://twitter.com/webman.io)]    
 Website: [www.webman.io](https://www.webman.io)    
 Email: [mark@webman.io](mailto:mark@webman.io)
