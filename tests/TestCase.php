@@ -590,4 +590,20 @@ class TestCase extends PHPUnit_Framework_TestCase
         $this->assertEquals('bar', $smartobject->foo);
         $this->assertEquals('foo', $smartobject->bar);
     }
+
+    /*
+     * test setAndGetProcessedAttribute
+     */
+    public function testChainableSettersOfObject()
+    {
+        $smartobject = new TestObject();
+        $smartobject->setProcessedAttribute("MARK");
+        $this->assertEquals('Mark', $smartobject->getProcessedAttribute());
+    }
+    public function testChainableSettersOfObjectWithGetterSetterDynamicMethodTrait()
+    {
+        $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
+        $smartobject->setProcessedAttribute("MARK");
+        $this->assertEquals('Mark', $smartobject->getProcessedAttribute());
+    }
 }
