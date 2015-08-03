@@ -594,13 +594,13 @@ class TestCase extends PHPUnit_Framework_TestCase
     /*
      * test setAndGetProcessedAttribute
      */
-    public function testChainableSettersOfObject()
+    public function testSetAndGetProcessedAttributeOfObject()
     {
         $smartobject = new TestObject();
         $smartobject->setProcessedAttribute("MARK");
         $this->assertEquals('Mark', $smartobject->getProcessedAttribute());
     }
-    public function testChainableSettersOfObjectWithGetterSetterDynamicMethodTrait()
+    public function testSetAndGetProcessedAttributeOfObjectWithGetterSetterDynamicMethodTrait()
     {
         $smartobject = new TestObjectWithGetterSetterDynamicMethodTrait();
         $smartobject->setProcessedAttribute("MARK");
