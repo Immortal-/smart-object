@@ -46,7 +46,7 @@ in your composer.json file:
 ```json
 {
     "require": {
-        "borter/smart-object": "~1"
+        "borter/smart-object": "1.1"
     }
 }
 ```
