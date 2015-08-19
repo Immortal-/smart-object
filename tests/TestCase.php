@@ -8,6 +8,7 @@ require __DIR__.'/Objects/TestObjectWithDynamicMethodTrait.php';
 require __DIR__.'/Objects/TestObjectWithGetterDynamicMethodTrait.php';
 require __DIR__.'/Objects/TestObjectWithSetterDynamicMethodTrait.php';
 require __DIR__.'/Objects/TestObjectWithGetterSetterDynamicMethodTrait.php';
+require __DIR__.'/Objects/TestObjectWithStrictSetterTrait.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
@@ -93,6 +94,27 @@ class TestCase extends PHPUnit_Framework_TestCase
         $smartobject = new TestObjectWithSetterTrait();
         $smartobject->setFoo('bar');
         $this->assertEquals('bar', $smartobject->foo);
+    }
+
+    public function testSetPropertyOfObjectWithSetterTrait()
+    {
+        $smartobject = new TestObjectWithSetterTrait();
+        $smartobject->foo = 'bar';
+        $this->assertEquals('bar', $smartobject->foo);
+    }
+
+    public function testSetterTraitOfObjectWithStrictSetterTrait()
+    {
+        $this->setExpectedException('RuntimeException', 'Property [foo] does not exists.');
+        $smartobject = new TestObjectWithStrictSetterTrait();
+        $smartobject->setFoo('bar');
+    }
+
+    public function testSetPropertyOfObjectWithStrictSetterTrait()
+    {
+        $this->setExpectedException('RuntimeException', 'Property [foo] does not exists.');
+        $smartobject = new TestObjectWithStrictSetterTrait();
+        $smartobject->foo = 'bar';
     }
 
     public function testSetterTraitOfObjectWithGetterSetterTrait()
